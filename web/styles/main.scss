@@ -1,0 +1,14 @@
+@import "concise/concise";
+
+@import "pages/landing";
+@import "pages/menu";
+
+.body-background {
+    background-position: center;
+    background-size    : cover;
+    display            : inline-block;
+    width              : 100%;
+}
+
+.body-background--0  { background-image: url(../assets/images/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg); @extend .body-background; }
+.body-background--1  { background-image: url(../assets/images/tumblr_mxrvaxiwFb1st5lhmo1_1280.jpg); @extend .body-background; }

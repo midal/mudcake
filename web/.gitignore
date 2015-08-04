@@ -1,0 +1,10 @@
+npm-debug.log
+selenium-debug.log
+node_modules/
+dist/
+pkg/
+reports/
+github.com/
+gitlab.tactel.se/
+*.swp
+*.swo
