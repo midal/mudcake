@@ -1,12 +1,13 @@
 'use strict';
 
 import React from 'react';
-import LandingPage from './components/component.landing.page.jsx';
-import MenuPage from './components/component.menu.page.jsx';
-import AccommodationPage from './components/component.accommodation.page.jsx';
-import NavBar from './components/component.navbar.jsx';
-
 import Router from 'react-router';
+
+import LandingPage from './components/pages/component.landing.page.jsx';
+import MenuPage from './components/pages/component.menu.page.jsx';
+import AccommodationPage from './components/pages/component.accommodation.page.jsx';
+
+import NavBar from './components/component.navbar.jsx';
 
 let DefaultRoute = Router.DefaultRoute;
 let Route = Router.Route;
