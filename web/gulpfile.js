@@ -1,24 +1,25 @@
 'use strict';
 
-var autoprefixer = require('gulp-autoprefixer');
-var babel        = require('babel/register');
-var babelify     = require('babelify');
-var browserify   = require('browserify');
-var browserSync  = require('browser-sync');
-var buffer       = require('vinyl-buffer');
-var changed      = require('gulp-changed');
-var csso         = require('gulp-csso');
-var del          = require('del');
-var eslint       = require('gulp-eslint');
-var gulp         = require('gulp');
-var mocha        = require('gulp-mocha');
-var notify       = require('gulp-notify');
-var reload       = browserSync.reload;
-var sass         = require('gulp-sass');
-var source       = require('vinyl-source-stream');
-var sourcemaps   = require('gulp-sourcemaps');
-var uglify       = require('gulp-uglify');
-var watchify     = require('watchify');
+var autoprefixer       = require('gulp-autoprefixer');
+var babel              = require('babel/register');
+var babelify           = require('babelify');
+var browserify         = require('browserify');
+var browserSync        = require('browser-sync');
+var buffer             = require('vinyl-buffer');
+var changed            = require('gulp-changed');
+var csso               = require('gulp-csso');
+var del                = require('del');
+var eslint             = require('gulp-eslint');
+var gulp               = require('gulp');
+var historyApiFallback = require('connect-history-api-fallback')
+var mocha              = require('gulp-mocha');
+var notify             = require('gulp-notify');
+var reload             = browserSync.reload;
+var sass               = require('gulp-sass');
+var source             = require('vinyl-source-stream');
+var sourcemaps         = require('gulp-sourcemaps');
+var uglify             = require('gulp-uglify');
+var watchify           = require('watchify');
 
 var p = {
       assets: ['assets/**/*.jpg', 'assets/**/*.png'],
@@ -38,7 +39,8 @@ gulp.task('clean', function(cb) {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: './'
+      baseDir: './',
+      middleware: [ historyApiFallback() ]
     }
   });
 });

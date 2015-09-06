@@ -3,11 +3,11 @@
 import React from 'react';
 import LandingPage from './components/component.landing.page.jsx';
 import MenuPage from './components/component.menu.page.jsx';
+import NavBar from './components/component.navbar.jsx';
 
 import Router from 'react-router';
 
 let DefaultRoute = Router.DefaultRoute;
-let Link = Router.Link;
 let Route = Router.Route;
 let RouteHandler = Router.RouteHandler;
 
@@ -15,13 +15,7 @@ let App = React.createClass({
     render: function () {
         return (
             <div>
-                <header>
-                    <ul>
-                        <li><Link to="/">Hem</Link></li>
-                        <li><Link to="menu">Meny</Link></li>
-                    </ul>
-                </header>
-
+                <NavBar/>
                 <RouteHandler/>
             </div>
         );
