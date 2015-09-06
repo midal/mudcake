@@ -3,6 +3,7 @@
 import React from 'react';
 import LandingPage from './components/component.landing.page.jsx';
 import MenuPage from './components/component.menu.page.jsx';
+import AccommodationPage from './components/component.accommodation.page.jsx';
 import NavBar from './components/component.navbar.jsx';
 
 import Router from 'react-router';
@@ -25,6 +26,7 @@ let App = React.createClass({
 let routes = (
     <Route name="app" path="/" handler={App}>
         <Route name="menu" handler={MenuPage}/>
+        <Route name="accommodation" handler={AccommodationPage}/>
         <DefaultRoute handler={LandingPage}/>
     </Route>
 );

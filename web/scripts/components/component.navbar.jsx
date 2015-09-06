@@ -12,6 +12,7 @@ let NavBar = React.createClass({
                 <ul className="list-inline">
                     <li><Link to="/">Hem</Link></li>
                     <li><Link to="menu">Meny</Link></li>
+                    <li><Link to="accommodation">Boende</Link></li>
                 </ul>
             </nav>
         );
